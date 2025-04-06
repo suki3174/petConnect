@@ -1,4 +1,4 @@
-package com.petconnect.petconnect.Repositoriesssss;
+package com.petconnect.petconnect.repositories;
 
 import com.petconnect.petconnect.Entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

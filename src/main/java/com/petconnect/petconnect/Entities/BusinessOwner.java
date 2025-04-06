@@ -12,9 +12,6 @@ import java.util.List;
 
 @Entity
 public class BusinessOwner extends User{
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     private String firstname;
     private String lastname;

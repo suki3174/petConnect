@@ -1,8 +1,6 @@
 package com.petconnect.petconnect.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,6 +14,8 @@ import java.util.Date;
 public class Adoption_offer extends Post{
     @Enumerated(EnumType.STRING)
     private Status_Adoption status;
+    @OneToOne
+    @JoinColumn(name = "pet_id")
     private Pet pet;
     public Adoption_offer(String description, Date date, String title, String location, byte[] image, Status_Adoption status,Pet pet){
         super(description,date,title,location,image);

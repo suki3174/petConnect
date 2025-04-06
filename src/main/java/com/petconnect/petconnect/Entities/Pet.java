@@ -1,9 +1,6 @@
 package com.petconnect.petconnect.Entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,6 +18,11 @@ public class Pet {
     private String name;
     private String breed;
     private String description;
+    @OneToOne(mappedBy = "pet")
+    private Lost_And_Found lostAndFoundPost;
+
+    @OneToOne(mappedBy = "pet")
+    private Adoption_offer adoptionOffer;
     public Pet(int age,String sex, String name, String breed, String description){
         this.age=age;
         this.sex=sex;

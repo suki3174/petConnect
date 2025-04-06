@@ -7,7 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PetconnectApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(PetconnectApplication.class, args);
+		try {
+			Thread.sleep(Long.MAX_VALUE);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
 	}
 
 }
