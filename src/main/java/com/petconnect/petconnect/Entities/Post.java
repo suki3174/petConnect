@@ -20,6 +20,11 @@ public class Post {
     private String location;
     @Lob
     private byte[] image;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Post(String description, Date date, String title,String location, byte[] image){
         this.description=description;
         this.date=date;
