@@ -11,19 +11,19 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Adoption_offer extends Post{
+public class LostAndFound extends Post {
     @Enumerated(EnumType.STRING)
-    private Status_Adoption status;
+    Status_LostAndFound status;
     @OneToOne
     @JoinColumn(name = "pet_id")
     private Pet pet;
-    public Adoption_offer(String description, Date date, String title, String location, byte[] image, Status_Adoption status,Pet pet){
+    public LostAndFound(String description, Date date, String title, String location, byte[] image, Status_LostAndFound status, Pet pet){
         super(description,date,title,location,image);
         this.status=status;
         this.pet=pet;
     }
     //No Image Constructor
-    public Adoption_offer(String description, Date date, String title, String location, Status_Adoption status, Pet pet){
+    public LostAndFound(String description, Date date, String title, String location, Status_LostAndFound status, Pet pet){
         super(description,date,title,location);
         this.status=status;
         this.pet=pet;

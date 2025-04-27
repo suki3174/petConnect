@@ -19,10 +19,10 @@ public class Pet {
     private String breed;
     private String description;
     @OneToOne(mappedBy = "pet")
-    private Lost_And_Found lostAndFoundPost;
+    private LostAndFound lostAndFoundPost;
 
     @OneToOne(mappedBy = "pet")
-    private Adoption_offer adoptionOffer;
+    private AdoptionOffer adoptionOffer;
     public Pet(int age,String sex, String name, String breed, String description){
         this.age=age;
         this.sex=sex;
