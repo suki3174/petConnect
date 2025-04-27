@@ -19,6 +19,7 @@ public class Service {
     private String type;
     private String location;
     private String description;
+    private boolean validated;
 
     @JoinColumn(nullable = true)
     private Integer rating;
@@ -28,6 +29,7 @@ public class Service {
         this.type=type;
         this.location=location;
         this.description=description;
-        this.rating=null; //no initial rating when creating
+        this.rating=null;
+        this.validated=false;//no initial rating when creating
     }
 }

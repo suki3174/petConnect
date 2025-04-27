@@ -17,6 +17,7 @@ public class Post {
     private String description;
     private Date date;
     private String title;
+    private boolean validated;
     private String location;
     @Lob
     private byte[] image;
@@ -31,6 +32,7 @@ public class Post {
         this.title=title;
         this.location=location;
         this.image=image;
+        this.validated=false;
     }
     //No Image Constructor
     public Post(String description, Date date, String title,String location){
@@ -38,6 +40,7 @@ public class Post {
         this.date=date;
         this.title=title;
         this.location=location;
+        this.validated=false;
     }
     //User Relation
 
