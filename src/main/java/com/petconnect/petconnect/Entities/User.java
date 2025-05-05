@@ -49,4 +49,13 @@ public class User {
         this.password=password;
         this.profilePicture="default_profile_picture_URL";//change later
     }
+
+    public String getPwd() {
+        return password;
+    }
+
+    public void setPwd(String password) {
+        this.password = password;
+    }
+
 }
